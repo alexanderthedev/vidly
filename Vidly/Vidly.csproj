@@ -179,11 +179,40 @@
     <Compile Include="Migrations\201610132155124_InitialModel.Designer.cs">
       <DependentUpon>201610132155124_InitialModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201610132211569_AddIsSubsribed.cs" />
+    <Compile Include="Migrations\201610132211569_AddIsSubsribed.Designer.cs">
+      <DependentUpon>201610132211569_AddIsSubsribed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610132220032_AddMemebership.cs" />
+    <Compile Include="Migrations\201610132220032_AddMemebership.Designer.cs">
+      <DependentUpon>201610132220032_AddMemebership.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610172046052_PopulateMembershipTypes.cs" />
+    <Compile Include="Migrations\201610172046052_PopulateMembershipTypes.Designer.cs">
+      <DependentUpon>201610172046052_PopulateMembershipTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610172055442_ApplyAnnotationsToCustomerName.cs" />
+    <Compile Include="Migrations\201610172055442_ApplyAnnotationsToCustomerName.Designer.cs">
+      <DependentUpon>201610172055442_ApplyAnnotationsToCustomerName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610181427025_UpdateMembershipTypesName.cs" />
+    <Compile Include="Migrations\201610181427025_UpdateMembershipTypesName.Designer.cs">
+      <DependentUpon>201610181427025_UpdateMembershipTypesName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610181429264_AddNamesToMembership.cs" />
+    <Compile Include="Migrations\201610181429264_AddNamesToMembership.Designer.cs">
+      <DependentUpon>201610181429264_AddNamesToMembership.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610182146589_AddBirthdate.cs" />
+    <Compile Include="Migrations\201610182146589_AddBirthdate.Designer.cs">
+      <DependentUpon>201610182146589_AddBirthdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\MembershipTypes.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -210,7 +239,9 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -263,6 +294,27 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201610132155124_InitialModel.resx">
       <DependentUpon>201610132155124_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610132211569_AddIsSubsribed.resx">
+      <DependentUpon>201610132211569_AddIsSubsribed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610132220032_AddMemebership.resx">
+      <DependentUpon>201610132220032_AddMemebership.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610172046052_PopulateMembershipTypes.resx">
+      <DependentUpon>201610172046052_PopulateMembershipTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610172055442_ApplyAnnotationsToCustomerName.resx">
+      <DependentUpon>201610172055442_ApplyAnnotationsToCustomerName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610181427025_UpdateMembershipTypesName.resx">
+      <DependentUpon>201610181427025_UpdateMembershipTypesName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610181429264_AddNamesToMembership.resx">
+      <DependentUpon>201610181429264_AddNamesToMembership.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610182146589_AddBirthdate.resx">
+      <DependentUpon>201610182146589_AddBirthdate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
