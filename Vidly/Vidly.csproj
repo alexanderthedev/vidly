@@ -207,15 +207,50 @@
     <Compile Include="Migrations\201610182146589_AddBirthdate.Designer.cs">
       <DependentUpon>201610182146589_AddBirthdate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201610221850391_AddGenrTable.cs" />
+    <Compile Include="Migrations\201610221850391_AddGenrTable.Designer.cs">
+      <DependentUpon>201610221850391_AddGenrTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610221852362_AddGenrTable1.cs" />
+    <Compile Include="Migrations\201610221852362_AddGenrTable1.Designer.cs">
+      <DependentUpon>201610221852362_AddGenrTable1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610221918452_AddGenreToMovie.cs" />
+    <Compile Include="Migrations\201610221918452_AddGenreToMovie.Designer.cs">
+      <DependentUpon>201610221918452_AddGenreToMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610221926305_addGenres.cs" />
+    <Compile Include="Migrations\201610221926305_addGenres.Designer.cs">
+      <DependentUpon>201610221926305_addGenres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610221956009_MoreMovieProp.cs" />
+    <Compile Include="Migrations\201610221956009_MoreMovieProp.Designer.cs">
+      <DependentUpon>201610221956009_MoreMovieProp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610222253108_TryMovie.cs" />
+    <Compile Include="Migrations\201610222253108_TryMovie.Designer.cs">
+      <DependentUpon>201610222253108_TryMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610222318388_shot1.cs" />
+    <Compile Include="Migrations\201610222318388_shot1.Designer.cs">
+      <DependentUpon>201610222318388_shot1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610222335566_shot2.cs" />
+    <Compile Include="Migrations\201610222335566_shot2.Designer.cs">
+      <DependentUpon>201610222335566_shot2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipTypes.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModel\MovieFormViewModel.cs" />
+    <Compile Include="ViewModel\NewCustomerViewModel.cs" />
     <Compile Include="ViewModel\RandomMovieVieModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -279,6 +314,9 @@
     <Content Include="Views\Customers\Index.cshtml" />
     <Content Include="Views\Customers\Details.cshtml" />
     <Content Include="Views\Movies\Index.cshtml" />
+    <Content Include="Views\Movies\Details.cshtml" />
+    <Content Include="Views\Customers\CustomerForm.cshtml" />
+    <Content Include="Views\Movies\MovieForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -315,6 +353,30 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201610182146589_AddBirthdate.resx">
       <DependentUpon>201610182146589_AddBirthdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610221850391_AddGenrTable.resx">
+      <DependentUpon>201610221850391_AddGenrTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610221852362_AddGenrTable1.resx">
+      <DependentUpon>201610221852362_AddGenrTable1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610221918452_AddGenreToMovie.resx">
+      <DependentUpon>201610221918452_AddGenreToMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610221926305_addGenres.resx">
+      <DependentUpon>201610221926305_addGenres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610221956009_MoreMovieProp.resx">
+      <DependentUpon>201610221956009_MoreMovieProp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610222253108_TryMovie.resx">
+      <DependentUpon>201610222253108_TryMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610222318388_shot1.resx">
+      <DependentUpon>201610222318388_shot1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610222335566_shot2.resx">
+      <DependentUpon>201610222335566_shot2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
