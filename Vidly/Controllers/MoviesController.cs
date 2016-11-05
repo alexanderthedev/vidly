@@ -31,9 +31,17 @@ namespace Vidly.Controllers
         {
             var movies = _context.Movies.Include(m => m.Genre).ToList();
 
-            return View(movies);
+            if (User.IsInRole(RolesTypes.CanManageMovie))
+            {
+            return View("List",movies);
+
+            }
+            return View("ReadOnlyList", movies);
+
+
         }
 
+        [Authorize(Roles = RolesTypes.CanManageMovie)]
         public ViewResult New()
         {
             var genres = _context.Genres.ToList();
@@ -46,6 +54,7 @@ namespace Vidly.Controllers
             return View("MovieForm", viewModel);
         }
 
+        [Authorize(Roles = RolesTypes.CanManageMovie)]
         public ActionResult Edit(int id)
         {
             var movie = _context.Movies.SingleOrDefault(c => c.Id == id);
@@ -53,9 +62,9 @@ namespace Vidly.Controllers
             if (movie == null)
                 return HttpNotFound();
 
-            var viewModel = new MovieFormViewModel
+            var viewModel = new MovieFormViewModel(movie)
             {
-                Movie = movie,
+           
                 Genres = _context.Genres.ToList()
             };
 
@@ -64,24 +73,24 @@ namespace Vidly.Controllers
 
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
+        [Authorize(Roles = RolesTypes.CanManageMovie)]
         public ActionResult Save(Movie movie)
         {
 
             if (!ModelState.IsValid)
             {
-                var viewModel = new MovieFormViewModel
+                var viewModel = new MovieFormViewModel(movie)
                 {
-                    Movie = movie,
                     Genres = _context.Genres.ToList()
                 };
                 return View("MovieForm", viewModel);
             }
-            Console.Write(movie);
+
             if (movie.Id == 0)
             {
-                
+                movie.DateAdded = DateTime.Now;
                 _context.Movies.Add(movie);
-                
             }
             else
             {
@@ -89,7 +98,7 @@ namespace Vidly.Controllers
                 movieInDb.Name = movie.Name;
                 movieInDb.GenreId = movie.GenreId;
                 movieInDb.NumberInStock = movie.NumberInStock;
-                movieInDb.ReleaseDate = DateTime.Now;
+                movieInDb.ReleaseDate = movie.ReleaseDate;
             }
 
             try
